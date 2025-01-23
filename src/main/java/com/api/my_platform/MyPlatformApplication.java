@@ -14,19 +14,7 @@ public class MyPlatformApplication {
 	private static final Logger logger = LoggerFactory.getLogger(MyPlatformApplication.class);
 
 	public static void main(String[] args) {
-
-		if (System.getProperty("R2DBC_URL") == null || System.getProperty("R2DBC_URL").isEmpty()) {
-			logger.error("R2DBC_URL is not set!");
-		}
-
-		if (System.getProperty("R2DBC_USERNAME") == null || System.getProperty("R2DBC_USERNAME").isEmpty()) {
-			logger.error("R2DBC_USERNAME is not set!");
-		}
-
-		if (System.getProperty("R2DBC_PASSWORD") == null || System.getProperty("R2DBC_PASSWORD").isEmpty()) {
-			logger.error("R2DBC_PASSWORD is not set!");
-		}
-
+		logger.info("Running MyPlatform application ...");
 		SpringApplication.run(MyPlatformApplication.class, args);
 	}
 
